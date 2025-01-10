@@ -13,7 +13,8 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '20.16.0'
+          node-version: 20
+          cache: npm
 
       - name: Install newman
         run: |
@@ -22,6 +23,6 @@ jobs:
           npm install -g @actions/core
 
       - name: Run Postman Collection
-        working-directory: ./postman
+        working-directory: ./
         run: |
           NODE_PATH=$(npm root -g) node run-collections.js -e ./environments/dev.json
