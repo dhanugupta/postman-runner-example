@@ -1,10 +1,9 @@
+name: Run postman collection
 on:
   push:
     branches: 'main'
 jobs:
   api-test:
-    name: Run postman collection
-    needs: deploy-dev
     runs-on: ubuntu-latest
 
     steps:
