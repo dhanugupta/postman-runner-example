@@ -14,7 +14,7 @@
 					"script": {
 						"exec": [
 							"const post  = pm.response.json()",
-							"",
+							"console.log(post)",
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
