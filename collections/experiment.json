@@ -20,7 +20,7 @@
 							"});",
 							"",
 							"pm.test(\"response should include post info\", function () {",
-							"  pm.expect(post.completed).to.eq(\"false\");",
+							"  pm.expect(post.title).to.eq(\"delectus aut autem\");",
 							"});"
 						],
 						"type": "text/javascript",
