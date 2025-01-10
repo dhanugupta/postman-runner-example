@@ -3,7 +3,7 @@ on:
   push:
     branches: 'main'
 jobs:
-  api-test:
+  postman-api-test:
     runs-on: ubuntu-latest
 
     steps:
