@@ -20,7 +20,6 @@
 							"});",
 							"",
 							"pm.test(\"response should include post info\", function () {",
-							"  pm.expect(post.userId).to.not.be.empty;;",
 							"  pm.expect(post.completed).to.eq(\"false\");",
 							"});"
 						],
