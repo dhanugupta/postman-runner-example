@@ -1,3 +1,6 @@
+on:
+  push:
+    branches: 'main'
 api-test:
   name: Run postman collection
   needs: deploy-dev
