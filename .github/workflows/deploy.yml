@@ -1,27 +1,28 @@
 on:
   push:
     branches: 'main'
-api-test:
-  name: Run postman collection
-  needs: deploy-dev
-  runs-on: ubuntu-latest
+jobs:
+  api-test:
+    name: Run postman collection
+    needs: deploy-dev
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Check out repo
-      uses: actions/checkout@v4
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
 
-    - name: Setup NodeJS
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.16.0'
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
 
-    - name: Install newman
-      run: |
-        npm install -g newman
-        npm install -g minimist
-        npm install -g @actions/core
+      - name: Install newman
+        run: |
+          npm install -g newman
+          npm install -g minimist
+          npm install -g @actions/core
 
-    - name: Run Postman Collection
-      working-directory: ./postman
-      run: |
-        NODE_PATH=$(npm root -g) node run-collections.js -e ./environments/dev.json
+      - name: Run Postman Collection
+        working-directory: ./postman
+        run: |
+          NODE_PATH=$(npm root -g) node run-collections.js -e ./environments/dev.json
