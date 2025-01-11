@@ -21,7 +21,6 @@ jobs:
           npm install -g minimist
           npm install -g newman-reporter-ctrf-json
           npm install -g @actions/core
-          npm install -g @actions/ctrf
 
       - name: Run Postman Collection
         working-directory: ./
