@@ -34,7 +34,16 @@ fs.readdir(folder, function (err, files) {
                 {
                     collection: require(`${folder}/${file}`),
                     environment: require(`${__dirname}/${env}`),
-                    reporters: ['cli','json']
+                    reporters: ['cli','ctrf-json'],
+                    reporter: {
+                          'ctrf-json': {
+                            outputFile: 'api_report_ctrf.json',
+                            outputDir: 'api-reports',
+                            minimal: true,
+                            testType: 'api',
+                            branchName: 'main'
+                            }
+                          }
                 },
                 err => {
                     if (err) {
