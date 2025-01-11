@@ -1,0 +1,33 @@
+{
+  "name": "postman-runner-example",
+  "version": "1.0.0",
+  "description": "postman runner testing via github actions and reports",
+  "main": "run-collections.js",
+  "scripts": {
+    "test": "node run-collections.js -e ./environments/dev.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanugupta/postman-runner-example.git"
+  },
+  "keywords": [
+    "postman",
+    "github-actions",
+    "postman-runner",
+    "api-testing"
+  ],
+  "author": "Dhanu Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhanugupta/postman-runner-example/issues"
+  },
+  "homepage": "https://github.com/dhanugupta/postman-runner-example#readme",
+  "devDependencies": {
+    "minimist": "^1.2.8",
+    "newman": "^6.2.1"
+  },
+  "dependencies": {
+    "newman-reporter-ctrf-json": "^0.0.9",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
