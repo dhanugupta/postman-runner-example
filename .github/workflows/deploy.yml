@@ -25,3 +25,7 @@ jobs:
         working-directory: ./
         run: |
           NODE_PATH=$(npm root -g) node run-collections.js -e ./environments/dev.json
+      - name: Publish Test Reports Postman Collection
+        working-directory: ./
+        run: |
+          run: npx github-actions-ctrf newman/*.json    

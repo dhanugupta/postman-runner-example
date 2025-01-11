@@ -34,8 +34,8 @@ fs.readdir(folder, function (err, files) {
                 {
                     collection: require(`${folder}/${file}`),
                     environment: require(`${__dirname}/${env}`),
-                    reporters: 'cli',
-                },
+                    reporters: ['cli','json']
+                }
                 err => {
                     if (err) {
                         //Let GA know of the failure. Can comment the two lines below to run it locally.
